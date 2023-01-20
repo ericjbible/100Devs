@@ -1,2 +1,3 @@
-//learning with mosh is fun!
-console.log('hello world');
+const interestRate = 0.3
+
+console.log(interestRate);
