@@ -11,4 +11,12 @@ let isCool = true //boolean literal
 let dateMarried = undefined
 let purchasedHouse = null
 
-//
+//Dynamic Typing
+
+//typeof operator helps us understand types of variables at run time, this is a reserved keyword
+
+//undefined is a type and a value whereas null is an object
+
+//Objects
+
+
