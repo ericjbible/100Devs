@@ -19,14 +19,33 @@
 
 //Objects
 
-let person = {
-  name: 'Eric',
-  age: 34.95
-};
+// let person = {
+//   name: 'Eric',
+//   age: 34.95
+// };
 
-console.log(person);
+// console.log(person);
 
 //Dot Notation with Objects
-console.log(person.name);
+// console.log(person.name);
 //Bracket Notation with Objects
-console.log(person['age']);
+// console.log(person['age']);
+
+//Arrays
+
+let selectedColors = ['red', 'blue'];
+console.log(selectedColors);
+
+//Arrays are zero-indexed, here is how to access the elements
+
+console.log(selectedColors[0]);
+
+//elements can also be initialized with index access
+
+selectedColors[2] = 'green';
+
+//arrays are technically objects and have properties that can be accessed using dot notation
+
+console.log(selectedColors.length);
+
+//Functions
