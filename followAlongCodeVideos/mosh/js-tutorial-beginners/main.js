@@ -33,19 +33,26 @@
 
 //Arrays
 
-let selectedColors = ['red', 'blue'];
-console.log(selectedColors);
+// let selectedColors = ['red', 'blue'];
+// console.log(selectedColors);
 
 //Arrays are zero-indexed, here is how to access the elements
 
-console.log(selectedColors[0]);
+// console.log(selectedColors[0]);
 
 //elements can also be initialized with index access
 
-selectedColors[2] = 'green';
+// selectedColors[2] = 'green';
 
 //arrays are technically objects and have properties that can be accessed using dot notation
 
-console.log(selectedColors.length);
+// console.log(selectedColors.length);
 
 //Functions
+
+function greet(name) {
+  //body of function
+  console.log(`Hello ${name}`);
+}
+
+greet('Eric');
