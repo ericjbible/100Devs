@@ -49,10 +49,19 @@
 // console.log(selectedColors.length);
 
 //Functions
-
-function greet(name) {
+//below function performs a task
+// function greet(name) {
   //body of function
-  console.log(`Hello ${name}`);
+  // console.log(`Hello ${name}`);
+// }
+
+// greet('Eric');
+
+//Types of Functions
+
+//calculating a value
+function square(number) {
+  return number * number;
 }
 
-greet('Eric');
+console.log(square(3));
