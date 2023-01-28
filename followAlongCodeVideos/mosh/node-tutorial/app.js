@@ -1,5 +1,24 @@
-function sayHello(name) {
-  console.log(`Hello ${name}`);
-}
+// function sayHello(name) {
+//   console.log(`Hello ${name}`);
+// }
 
-sayHello('Eric');
+// sayHello('Eric');
+
+/*
+console.log(); // global
+
+setTimeout();
+clearTimeout();
+
+setInterval();
+clearInterval();
+
+Above -- These are all global in JavaScript from the window object
+Below -- node has a similar object called global
+
+var message =''
+
+console.log(global.message) would be undefined as there is only local modular scope in Node
+*/
+
+
