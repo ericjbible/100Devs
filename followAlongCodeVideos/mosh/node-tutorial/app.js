@@ -21,4 +21,6 @@ var message =''
 console.log(global.message) would be undefined as there is only local modular scope in Node
 */
 
+//every node project has at least one main module
 
+console.log(module);
