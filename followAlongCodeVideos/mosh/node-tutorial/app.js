@@ -23,4 +23,8 @@ console.log(global.message) would be undefined as there is only local modular sc
 
 //every node project has at least one main module
 
-console.log(module);
+// console.log(module);
+
+const logger = require('./logger'); //returns the export object from the module
+
+logger.log('message');
