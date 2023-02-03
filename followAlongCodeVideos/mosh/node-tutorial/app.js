@@ -25,6 +25,12 @@ console.log(global.message) would be undefined as there is only local modular sc
 
 // console.log(module);
 
-const log = require('./logger'); //returns the export object from the module
+// const log = require('./logger'); //returns the export object from the module
 
-log('message');
+// log('message');
+
+const path = require('path')
+
+let pathObj = path.parse(__filename);
+
+console.log(pathObj);
