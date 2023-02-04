@@ -29,8 +29,17 @@ console.log(global.message) would be undefined as there is only local modular sc
 
 // log('message');
 
-const path = require('path')
+// const path = require('path')
 
-let pathObj = path.parse(__filename);
+// let pathObj = path.parse(__filename);
 
-console.log(pathObj);
+// console.log(pathObj);
+
+const os = require('os');
+
+let totalMemory = os.totalmem();
+let freeMemory = os.freemem();
+
+console.log(`Total Memory: ${totalMemory} and Free Memory: ${freeMemory}`)
+
+console.log(`Used Memory: ${totalMemory - freeMemory}`)
