@@ -44,12 +44,23 @@ console.log(global.message) would be undefined as there is only local modular sc
 
 // console.log(`Used Memory: ${totalMemory - freeMemory}`)
 
-const fs = require('fs');
+// const fs = require('fs');
 
 // const files = fs.readdirSync('./');
 // console.log(files)
 
-fs.readdir('./', function(err, files) {
-  if (err) console.log('Error', err);
-  else console.log('Result', files);
-})
+// fs.readdir('./', function(err, files) {
+  // if (err) console.log('Error', err);
+  // else console.log('Result', files);
+// })
+
+const EventEmitter = require('events');
+
+const emitter = new EventEmitter();
+
+emitter.addListener('messageLogged', function() {
+  console.log('Listener called');
+}); //registering a listener
+
+emitter.emit('messageLogged'); //signaling an event
+
