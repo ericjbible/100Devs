@@ -64,3 +64,8 @@ emitter.addListener('messageLogged', (arg) => {
 
 emitter.emit('messageLogged', {id: 1, url: 'http://'}); //signaling an event
 
+emitter.on('logging', (arg) => {
+  console.log('Logger instantiated', arg);
+});
+
+emitter.emit('logging', {id: 2, url: 'https://ejbdevdes.com'});
