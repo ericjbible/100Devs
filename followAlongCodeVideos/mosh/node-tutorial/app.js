@@ -53,19 +53,14 @@ console.log(global.message) would be undefined as there is only local modular sc
   // if (err) console.log('Error', err);
   // else console.log('Result', files);
 // })
-
 const EventEmitter = require('events');
-
 const emitter = new EventEmitter();
 
-emitter.addListener('messageLogged', (arg) => {
+const Logger = require('./logger');
+const logger = new Logger();
+
+logger.addListener('messageLogged', (arg) => {
   console.log('Listener called', arg);
 }); //registering a listener
 
-emitter.emit('messageLogged', {id: 1, url: 'http://'}); //signaling an event
-
-emitter.on('logging', (arg) => {
-  console.log('Logger instantiated', arg);
-});
-
-emitter.emit('logging', {id: 2, url: 'https://ejbdevdes.com'});
+logger.log('message');
