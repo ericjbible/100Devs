@@ -54,7 +54,6 @@ console.log(global.message) would be undefined as there is only local modular sc
   // else console.log('Result', files);
 // })
 const EventEmitter = require('events');
-const emitter = new EventEmitter();
 
 const Logger = require('./logger');
 const logger = new Logger();
