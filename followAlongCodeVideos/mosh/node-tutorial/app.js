@@ -53,13 +53,37 @@ console.log(global.message) would be undefined as there is only local modular sc
   // if (err) console.log('Error', err);
   // else console.log('Result', files);
 // })
-const EventEmitter = require('events');
+// const EventEmitter = require('events');
 
-const Logger = require('./logger');
-const logger = new Logger();
+// const Logger = require('./logger');
+// const logger = new Logger();
 
-logger.addListener('messageLogged', (arg) => {
-  console.log('Listener called', arg);
-}); //registering a listener
+// logger.addListener('messageLogged', (arg) => {
+  // console.log('Listener called', arg);
+// }); //registering a listener
 
-logger.log('message');
+// logger.log('message');
+
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  if (req.url === '/') {
+    res.write('Hello World');
+    res.end;
+  }
+  if (req.url === '/api/courses') {
+    res.write(JSON.stringify([1, 2, 3]));
+    res.end
+  }
+}); //is an EventEmitter
+
+
+server.listen(3000);
+
+console.log('listening on port 3000...');
+
+
+
+server.on('connection', (socket) => {
+  console.log('New connection...');
+});
