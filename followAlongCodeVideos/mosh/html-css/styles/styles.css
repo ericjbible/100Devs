@@ -5,3 +5,7 @@ body {
 #products ~ p {
   color: orange;
 }
+
+article .first {
+  font-style: italic;
+}
