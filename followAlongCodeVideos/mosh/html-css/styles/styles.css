@@ -9,3 +9,12 @@ body {
 article .first {
   font-style: italic;
 }
+
+p::first-letter {
+  font-size: 140%;
+  font-weight: bold;
+}
+
+p::first-line {
+  font-weight: bold;
+}
