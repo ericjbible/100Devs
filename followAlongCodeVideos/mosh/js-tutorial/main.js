@@ -692,13 +692,27 @@
 //   return num;
 // }
 
+// const numbers = [1, 2, 3, 4];
+
+// console.log(numbers.includes(1));
+
+// function includes(a, searchElement) {
+//   for (let element of array)
+//     if (element === searchElement)
+//       return true;
+//   return false;
+// }
+
 const numbers = [1, 2, 3, 4];
 
-console.log(numbers.includes(1));
+const output = except(numbers, [1, 4]);
 
-function includes(a, searchElement) {
+console.log(output);
+
+function except(array, e) {
+  const output = [];
   for (let element of array)
-    if (element === searchElement)
-      return true;
-  return false;
+    if (!e.includes(element))
+      output.push(element);
+  return output;
 }
