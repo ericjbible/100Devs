@@ -680,14 +680,25 @@
 
 // console.log(result);
 
-const numbers = arrayFromRange(1, 4);
+// const numbers = arrayFromRange(1, 4);
 
-console.log(numbers);
+// console.log(numbers);
 
-function arrayFromRange(min, max) {
-  const num = [];
-  for (let i = min; i <= max; i++) {
-    num .push(i);
-  }
-  return num;
+// function arrayFromRange(min, max) {
+//   const num = [];
+//   for (let i = min; i <= max; i++) {
+//     num .push(i);
+//   }
+//   return num;
+// }
+
+const numbers = [1, 2, 3, 4];
+
+console.log(numbers.includes(1));
+
+function includes(a, searchElement) {
+  for (let element of array)
+    if (element === searchElement)
+      return true;
+  return false;
 }
