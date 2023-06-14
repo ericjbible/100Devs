@@ -665,17 +665,29 @@
 
 // console.log(courses);
 
-const numbers = [1, -1, 2, 3];
+// const numbers = [1, -1, 2, 3];
 
-let sum = 0;
+// let sum = 0;
 
-for (let n of numbers)
-  sum += n;
+// for (let n of numbers)
+//   sum += n;
 
-console.log(sum);
+// console.log(sum);
 
-const result = numbers.reduce((acc, v) => {
-  return acc += v;
-}, 0)
+// const result = numbers.reduce((acc, v) => {
+//   return acc += v;
+// }, 0)
 
-console.log(result);
+// console.log(result);
+
+const numbers = arrayFromRange(1, 4);
+
+console.log(numbers);
+
+function arrayFromRange(min, max) {
+  const num = [];
+  for (let i = min; i <= max; i++) {
+    num .push(i);
+  }
+  return num;
+}
