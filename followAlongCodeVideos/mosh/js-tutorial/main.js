@@ -667,19 +667,15 @@
 
 const numbers = [1, -1, 2, 3];
 
-const atLeastOnePositive = numbers.some(value => value >=0);
-const allPositive = numbers.every(value => value >=0);
+let sum = 0;
 
-console.log(atLeastOnePositive);
-console.log(allPositive);
+for (let n of numbers)
+  sum += n;
 
-const items = numbers
-  .filter(value => value>= 0)
-  .map(n => {
-    return { value: n };
-  });
+console.log(sum);
 
+const result = numbers.reduce((acc, v) => {
+  return acc += v;
+}, 0)
 
-
-console.log(items);
-
+console.log(result);
