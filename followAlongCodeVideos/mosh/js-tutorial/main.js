@@ -673,13 +673,13 @@ const allPositive = numbers.every(value => value >=0);
 console.log(atLeastOnePositive);
 console.log(allPositive);
 
-const filtered = numbers.filter(value => value>= 0);
+const items = numbers
+  .filter(value => value>= 0)
+  .map(n => {
+    return { value: n };
+  });
 
-const items = filtered.map(n => {
-  return { value: n };
-});
 
 
-console.log(filtered);
 console.log(items);
 
