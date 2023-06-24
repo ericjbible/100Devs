@@ -606,18 +606,23 @@
 // console.log(numbers);
 // console.log(another);
 
-const first = [1,2,3];
-const second = [4,5,6];
+// const first = [1,2,3];
+// const second = [4,5,6];
 
 // const combined = first.concat(second);
-const combined = [...first, ...second];
+// const combined = [...first, ...second];
 
-console.log(combined);
+// console.log(combined);
 
-const copy = [...combined];
+// const copy = [...combined];
 
 // const slice = combined.slice();
 
 // console.log(slice);
 
+const numbers = [1,2,3];
 
+for (let number of numbers)
+  console.log(number);
+
+  numbers.forEach((number, index) => console.log(number, index));
