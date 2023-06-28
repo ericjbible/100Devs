@@ -586,8 +586,8 @@
 // numbers.splice(2, 2);
 // console.log(numbers);
 
-let numbers = [1,2,3,4];
-let another = numbers;
+// let numbers = [1,2,3,4];
+// let another = numbers;
 
 //emptying an array
 //solution 1
@@ -605,3 +605,14 @@ let another = numbers;
 
 // console.log(numbers);
 // console.log(another);
+
+const first = [1,2,3];
+const second = [4,5,6];
+
+const combined = first.concat(second);
+
+console.log(combined);
+
+const slice = combined.slice();
+
+console.log(slice);
