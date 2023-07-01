@@ -572,7 +572,7 @@
 
 // console.log(course);
 
-const numbers = [1,2,3,4]
+// const numbers = [1,2,3,4]
 
 // //end
 // const last = numbers.pop();
@@ -583,5 +583,25 @@ const numbers = [1,2,3,4]
 // console.log(numbers);
 // console.log(first);
 // //middle
-numbers.splice(2, 2);
-console.log(numbers);
+// numbers.splice(2, 2);
+// console.log(numbers);
+
+let numbers = [1,2,3,4];
+let another = numbers;
+
+//emptying an array
+//solution 1
+// numbers = [];
+
+//solution 2
+// numbers.length = 0;
+
+//solution 3
+// numbers.splice(0, numbers.length);
+
+//solution 4
+// while (numbers.length > 0)
+//   numbers.pop();
+
+// console.log(numbers);
+// console.log(another);
