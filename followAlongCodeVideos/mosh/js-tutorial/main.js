@@ -561,13 +561,27 @@
 // console.log(numbers.lastIndexOf(1));
 // console.log(numbers.includes(3));
 
-const courses = [
-  {id:1, name:'a'},
-  {id:2, name:'b'}
-];
+// const courses = [
+//   {id:1, name:'a'},
+//   {id:2, name:'b'}
+// ];
 
-const course = courses.find(function(course) {
-  return course.name = 'a';
-});
+// const course = courses.find(function(course) {
+//   return course.name = 'a';
+// });
 
-console.log(course);
+// console.log(course);
+
+const numbers = [1,2,3,4]
+
+// //end
+// const last = numbers.pop();
+// console.log(numbers);
+// console.log(last);
+// //beginning
+// const first = numbers.shift();
+// console.log(numbers);
+// console.log(first);
+// //middle
+numbers.splice(2, 2);
+console.log(numbers);
