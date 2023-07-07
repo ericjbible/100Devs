@@ -541,18 +541,22 @@
 //   }
 // ];
 
-const numbers = [3, 4];
-numbers[0] = 5;
+// const numbers = [3, 4];
+// numbers[0] = 5;
 
-//end
-numbers.push(9);
-console.log(numbers);
+// //end
+// numbers.push(9);
+// console.log(numbers);
 
-//beginning
-numbers.unshift(0);
-console.log(numbers);
+// //beginning
+// numbers.unshift(0);
+// console.log(numbers);
 
-//middle
+// //middle
 
-numbers.splice(1, 0, 2);
-console.log(numbers);
+// numbers.splice(1, 0, 2);
+// console.log(numbers);
+
+const numbers = [1, 2, 1, 3, 4];
+console.log(numbers.lastIndexOf(1));
+console.log(numbers.includes(3));
