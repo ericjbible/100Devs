@@ -514,30 +514,45 @@
 
 // console.log(unpublishedPost);
 
-let priceRange = [
-  {
-    label: '$',
-    tooltip: 'Inexpensive',
-    minPerPerson: 0,
-    maxPerPerson: 10
-  },
-  {
-    label: '$$',
-    tooltip: 'Moderate',
-    minPerPerson: 11,
-    maxPerPerson: 30
-  },
-  {
-    label: '$$$',
-    tooltip: 'Expensive',
-    minPerPerson: 31,
-    maxPerPerson: 50
-  },
-  {
-    label: '$$$$',
-    tooltip: 'Luxurious',
-    minPerPerson: 51,
-    maxPerPerson: 150
-  }
-];
+// let priceRange = [
+//   {
+//     label: '$',
+//     tooltip: 'Inexpensive',
+//     minPerPerson: 0,
+//     maxPerPerson: 10
+//   },
+//   {
+//     label: '$$',
+//     tooltip: 'Moderate',
+//     minPerPerson: 11,
+//     maxPerPerson: 30
+//   },
+//   {
+//     label: '$$$',
+//     tooltip: 'Expensive',
+//     minPerPerson: 31,
+//     maxPerPerson: 50
+//   },
+//   {
+//     label: '$$$$',
+//     tooltip: 'Luxurious',
+//     minPerPerson: 51,
+//     maxPerPerson: 150
+//   }
+// ];
 
+const numbers = [3, 4];
+numbers[0] = 5;
+
+//end
+numbers.push(9);
+console.log(numbers);
+
+//beginning
+numbers.unshift(0);
+console.log(numbers);
+
+//middle
+
+numbers.splice(1, 0, 2);
+console.log(numbers);
