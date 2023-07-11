@@ -487,29 +487,57 @@
 //  (author, body)
 //isLive
 
-let blogPostObject = {
-  title: 'a',
-  body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, in!',
-  author: 'Eric Bible',
-  views: 6969,
-  comments: [{
-    author: 'Jane Duprey',
-    body: 'Lorem ipsum dolor sit amet.'
-  }],
-    isLive: true
-};
+// let blogPostObject = {
+//   title: 'a',
+//   body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, in!',
+//   author: 'Eric Bible',
+//   views: 6969,
+//   comments: [{
+//     author: 'Jane Duprey',
+//     body: 'Lorem ipsum dolor sit amet.'
+//   }],
+//     isLive: true
+// };
 
-console.log(blogPostObject);
+// console.log(blogPostObject);
 
-function BlogPost(title, body, author) {
-  this.title = title,
-  this.body = body,
-  this.author = author
-  this.views = 0,
-  this.comments = [],
-  this.isLive = false
-}
+// function BlogPost(title, body, author) {
+//   this.title = title,
+//   this.body = body,
+//   this.author = author
+//   this.views = 0,
+//   this.comments = [],
+//   this.isLive = false
+// }
 
-const unpublishedPost = new BlogPost('a', 'b', 'c');
+// const unpublishedPost = new BlogPost('a', 'b', 'c');
 
-console.log(unpublishedPost);
+// console.log(unpublishedPost);
+
+let priceRange = [
+  {
+    label: '$',
+    tooltip: 'Inexpensive',
+    minPerPerson: 0,
+    maxPerPerson: 10
+  },
+  {
+    label: '$$',
+    tooltip: 'Moderate',
+    minPerPerson: 11,
+    maxPerPerson: 30
+  },
+  {
+    label: '$$$',
+    tooltip: 'Expensive',
+    minPerPerson: 31,
+    maxPerPerson: 50
+  },
+  {
+    label: '$$$$',
+    tooltip: 'Luxurious',
+    minPerPerson: 51,
+    maxPerPerson: 150
+  }
+];
+
