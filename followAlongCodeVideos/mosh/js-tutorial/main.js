@@ -501,15 +501,15 @@ let blogPostObject = {
 
 console.log(blogPostObject);
 
-function BlogPost(title, body, author, views, comments, isLive) {
+function BlogPost(title, body, author) {
   this.title = title,
   this.body = body,
-  this.author = author,
-  this.views = views,
-  this.comments = comments,
-  this.isLive = isLive
+  this.author = author
+  this.views = 0,
+  this.comments = [],
+  this.isLive = false
 }
 
-const unpublishedPost = new BlogPost('a', 'b', 'c', 0, [], false);
+const unpublishedPost = new BlogPost('a', 'b', 'c');
 
 console.log(unpublishedPost);
