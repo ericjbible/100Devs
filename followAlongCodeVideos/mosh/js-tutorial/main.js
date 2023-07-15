@@ -447,34 +447,69 @@
 
 // console.log(ericAddress);
 
-function Address(street, city, zipCode) {
-  this.street = street,
-  this.city = city,
-  this.zipCode = zipCode
+// function Address(street, city, zipCode) {
+//   this.street = street,
+//   this.city = city,
+//   this.zipCode = zipCode
+// }
+
+// const maryAddress = new Address('456 main st', 'yomomma', 42069);
+
+// console.log(maryAddress);
+
+// const address1 = new Address('a', 'b', 'c');
+// const address2 = new Address('a', 'b', 'c');
+
+// function areEqual(address1, address2) {
+//   for(key1 in address1) {
+//     let value = address1[key1];
+//     for(key2 in address2){
+//       if (value !== address2[key2])
+//         return false;
+//       else
+//         return true;
+//     }
+//   }
+// }
+
+// function areSame(address1, address2) {
+//   return (address1 === address2);
+// }
+
+// console.log(areSame(address1, address2));
+// console.log(areEqual(address1, address2));
+
+//title
+//body
+//author
+//views
+//comments
+//  (author, body)
+//isLive
+
+let blogPostObject = {
+  title: 'a',
+  body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, in!',
+  author: 'Eric Bible',
+  views: 6969,
+  comments: [{
+    author: 'Jane Duprey',
+    body: 'Lorem ipsum dolor sit amet.'
+  }],
+    isLive: true
+};
+
+console.log(blogPostObject);
+
+function BlogPost(title, body, author, views, comments, isLive) {
+  this.title = title,
+  this.body = body,
+  this.author = author,
+  this.views = views,
+  this.comments = comments,
+  this.isLive = isLive
 }
 
-const maryAddress = new Address('456 main st', 'yomomma', 42069);
+const unpublishedPost = new BlogPost('a', 'b', 'c', 0, [], false);
 
-console.log(maryAddress);
-
-const address1 = new Address('a', 'b', 'c');
-const address2 = new Address('a', 'b', 'c');
-
-function areEqual(address1, address2) {
-  for(key1 in address1) {
-    let value = address1[key1];
-    for(key2 in address2){
-      if (value !== address2[key2])
-        return false;
-      else
-        return true;
-    }
-  }
-}
-
-function areSame(address1, address2) {
-  return (address1 === address2);
-}
-
-console.log(areSame(address1, address2));
-console.log(areEqual(address1, address2));
+console.log(unpublishedPost);
