@@ -435,17 +435,17 @@
 
 // showAddress(addressEric);
 
-function createAddress(street, city, zipCode) {
-  return {
-    street,
-    city,
-    zipCode
-  };
-}
+// function createAddress(street, city, zipCode) {
+//   return {
+//     street,
+//     city,
+//     zipCode
+//   };
+// }
 
-const ericAddress = createAddress('123 main st', 'yomomma', 42069);
+// const ericAddress = createAddress('123 main st', 'yomomma', 42069);
 
-console.log(ericAddress);
+// console.log(ericAddress);
 
 function Address(street, city, zipCode) {
   this.street = street,
@@ -456,3 +456,25 @@ function Address(street, city, zipCode) {
 const maryAddress = new Address('456 main st', 'yomomma', 42069);
 
 console.log(maryAddress);
+
+const address1 = new Address('a', 'b', 'c');
+const address2 = new Address('a', 'b', 'c');
+
+function areEqual(address1, address2) {
+  for(key1 in address1) {
+    let value = address1[key1];
+    for(key2 in address2){
+      if (value !== address2[key2])
+        return false;
+      else
+        return true;
+    }
+  }
+}
+
+function areSame(address1, address2) {
+  return (address1 === address2);
+}
+
+console.log(areSame(address1, address2));
+console.log(areEqual(address1, address2));
