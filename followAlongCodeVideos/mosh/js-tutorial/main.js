@@ -421,16 +421,38 @@
 
 // console.log(circle);
 
-const addressEric = {
-  street: '123 main st',
-  city: 'yomomma',
-  zipCode: 42069
-};
+// const addressEric = {
+//   street: '123 main st',
+//   city: 'yomomma',
+//   zipCode: 42069
+// };
 
-function showAddress(address) {
-  for (let key in address) {
-    console.log(key, address[key]);
-  }
+// function showAddress(address) {
+//   for (let key in address) {
+//     console.log(key, address[key]);
+//   }
+// }
+
+// showAddress(addressEric);
+
+function createAddress(street, city, zipCode) {
+  return {
+    street,
+    city,
+    zipCode
+  };
 }
 
-showAddress(addressEric);
+const ericAddress = createAddress('123 main st', 'yomomma', 42069);
+
+console.log(ericAddress);
+
+function Address(street, city, zipCode) {
+  this.street = street,
+  this.city = city,
+  this.zipCode = zipCode
+}
+
+const maryAddress = new Address('456 main st', 'yomomma', 42069);
+
+console.log(maryAddress);
