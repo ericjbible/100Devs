@@ -408,15 +408,29 @@
 
 // const circle = new Circle(1);
 
-const circle = {
-  radius: 1
+// const circle = {
+//   radius: 1
+// };
+
+// circle.color = 'purple';
+
+// circle.draw = function() {}
+
+// delete circle.color;
+// delete circle.draw;
+
+// console.log(circle);
+
+const addressEric = {
+  street: '123 main st',
+  city: 'yomomma',
+  zipCode: 42069
 };
 
-circle.color = 'purple';
+function showAddress(address) {
+  for (let key in address) {
+    console.log(key, address[key]);
+  }
+}
 
-circle.draw = function() {}
-
-delete circle.color;
-delete circle.draw;
-
-console.log(circle);
+showAddress(addressEric);
