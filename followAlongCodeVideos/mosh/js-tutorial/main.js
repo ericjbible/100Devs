@@ -399,11 +399,24 @@
 
 // Constructor Function
 
-function Circle(radius) {
-  this.radius = radius;
-  this.draw = function() {
-    console.log('draw');
-  }
-}
+// function Circle(radius) {
+//   this.radius = radius;
+//   this.draw = function() {
+//     console.log('draw');
+//   }
+// }
 
-const circle = new Circle(1);
+// const circle = new Circle(1);
+
+const circle = {
+  radius: 1
+};
+
+circle.color = 'purple';
+
+circle.draw = function() {}
+
+delete circle.color;
+delete circle.draw;
+
+console.log(circle);
