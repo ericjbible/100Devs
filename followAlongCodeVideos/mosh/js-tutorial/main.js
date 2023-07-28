@@ -354,7 +354,7 @@
 
 // showPrimes(20);
 
-// //Prime (whose factors are only 1 and itself)
+// Prime (whose factors are only 1 and itself)
 
 // function showPrimes(limit) {
 //   for (let num = 2; num <= limit; num++)
@@ -368,17 +368,31 @@
 //   return true;
 // }
 
-const circle = {
-  radus: 1,
-  location: {
-    x: 1,
-    y: 1
-  },
-  isVisible: true,
-  draw: function(){
-    console.log('draw');
-  }
+// const circle = {
+//   radus: 1,
+//   location: {
+//     x: 1,
+//     y: 1
+//   },
+//   isVisible: true,
+//   draw: function(){
+//     console.log('draw');
+//   }
+// };
+
+// circle.draw();
+
+// Factory Function
+
+function createCircle(radius) {
+  return {
+    radius,
+    draw() {
+      console.log('draw');
+    }
 };
+}
 
-circle.draw();
+const circle1 = createCircle(1);
 
+console.log(circle1);
