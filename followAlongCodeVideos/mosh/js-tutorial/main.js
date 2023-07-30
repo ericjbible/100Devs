@@ -352,18 +352,33 @@
 //   }
 // }
 
-showPrimes(20);
+// showPrimes(20);
 
-//Prime (whose factors are only 1 and itself)
+// //Prime (whose factors are only 1 and itself)
 
-function showPrimes(limit) {
-  for (let num = 2; num <= limit; num++)
-    if (isPrime(num)) console.log(num);
-}
+// function showPrimes(limit) {
+//   for (let num = 2; num <= limit; num++)
+//     if (isPrime(num)) console.log(num);
+// }
 
-function isPrime(num) {
-  for (let factor = 2; factor < num; factor++)
-    if (num % factor === 0)
-      return false;
-  return true;
-}
+// function isPrime(num) {
+//   for (let factor = 2; factor < num; factor++)
+//     if (num % factor === 0)
+//       return false;
+//   return true;
+// }
+
+const circle = {
+  radus: 1,
+  location: {
+    x: 1,
+    y: 1
+  },
+  isVisible: true,
+  draw: function(){
+    console.log('draw');
+  }
+};
+
+circle.draw();
+
