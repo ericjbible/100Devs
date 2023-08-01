@@ -340,14 +340,30 @@
 //     return 'A';
 // }
 
-showStars(5);
+// showStars(5);
 
-function showStars(rows) {
-  for (let i = 1; i <= rows; i++) {
-    let pattern = '';
-    for (let j = 0; j < i; j++){
-      pattern += '*';
-    }
-    console.log(pattern);
-  }
+// function showStars(rows) {
+//   for (let i = 1; i <= rows; i++) {
+//     let pattern = '';
+//     for (let j = 0; j < i; j++){
+//       pattern += '*';
+//     }
+//     console.log(pattern);
+//   }
+// }
+
+showPrimes(20);
+
+//Prime (whose factors are only 1 and itself)
+
+function showPrimes(limit) {
+  for (let num = 2; num <= limit; num++)
+    if (isPrime(num)) console.log(num);
+}
+
+function isPrime(num) {
+  for (let factor = 2; factor < num; factor++)
+    if (num % factor === 0)
+      return false;
+  return true;
 }
