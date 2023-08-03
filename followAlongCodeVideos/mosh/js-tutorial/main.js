@@ -214,7 +214,7 @@
 //   i++
 // }
 
-// write a function that takes two numbers and returns the maxiumum of the two
+// write a function that takes two numbers and returns the maximum of the two
 
 // function maxOfTwo(a, b) {
 //   if (a > b)
@@ -308,7 +308,7 @@
 //   return sum
 // }
 
-const marks = [80, 80, 40];
+// const marks = [80, 80, 40];
 
 // 1-59: F
 // 60-69: D
@@ -316,26 +316,38 @@ const marks = [80, 80, 40];
 // +10 : B
 // 90-100: A
 
-console.log(calculateGrade(marks));
+// console.log(calculateGrade(marks));
 
-function calculateGrade(marks) {
-  let sum = 0;
-  let divisor = marks.length;
+// function calculateGrade(marks) {
+//   let sum = 0;
+//   let divisor = marks.length;
 
-  for(let index of marks) {
-    sum += index;
+//   for(let index of marks) {
+//     sum += index;
+//   }
+
+//   let average = sum / divisor;
+
+//   if (average <= 59)
+//     return 'F';
+//   else if (average <= 69)
+//     return 'D';
+//   else if (average <= 79)
+//     return 'C';
+//   else if (average <= 89)
+//     return 'B';
+//   else
+//     return 'A';
+// }
+
+showStars(5);
+
+function showStars(rows) {
+  for (let i = 1; i <= rows; i++) {
+    let pattern = '';
+    for (let j = 0; j < i; j++){
+      pattern += '*';
+    }
+    console.log(pattern);
   }
-
-  let average = sum / divisor;
-
-  if (average <= 59)
-    return 'F';
-  else if (average <= 69)
-    return 'D';
-  else if (average <= 79)
-    return 'C';
-  else if (average <= 89)
-    return 'B';
-  else
-    return 'A';
 }
