@@ -281,18 +281,61 @@
 //   }
 //   return x;
 // }
-const movie = {
-  title: 'a',
-  director: 'b',
-  releaseYear: 2023,
-  rating: 3.5
-};
+// const movie = {
+//   title: 'a',
+//   director: 'b',
+//   releaseYear: 2023,
+//   rating: 3.5
+// };
 
-showProperties(movie)
-function showProperties(obj) {
-  for(let property in obj) {
-    if (typeof obj[property] === 'string') {
-      console.log(property, obj[property]);
-    }
+// showProperties(movie)
+// function showProperties(obj) {
+//   for(let property in obj) {
+//     if (typeof obj[property] === 'string') {
+//       console.log(property, obj[property]);
+//     }
+//   }
+// }
+// console.log(sum(10));
+
+// function sum(limit) {
+//   let sum = 0;
+//   for (let i = 0; i <= limit; i++) {
+//     if ((i % 3 === 0) || (i % 5 === 0)) {
+//       sum = sum + i;
+//     }
+//   }
+//   return sum
+// }
+
+const marks = [80, 80, 40];
+
+// 1-59: F
+// 60-69: D
+// +10 : C
+// +10 : B
+// 90-100: A
+
+console.log(calculateGrade(marks));
+
+function calculateGrade(marks) {
+  let sum = 0;
+  let divisor = marks.length;
+
+  for(let index of marks) {
+    sum += index;
   }
+
+  let average = sum / divisor;
+
+  if (average <= 59)
+    return 'F';
+  else if (average <= 69)
+    return 'D';
+  else if (average <= 79)
+    return 'C';
+  else if (average <= 89)
+    return 'B';
+  else
+    return 'A';
 }
