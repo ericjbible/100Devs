@@ -270,14 +270,29 @@
 //   }
 // }
 
-console.log(countTruthy([false, NaN, 1, 2, 3]));
+// console.log(countTruthy([false, NaN, 1, 2, 3]));
 
-function countTruthy(array) {
-  let x = 0;
-  for(let index of array) {
-    if (index) {
-      x++;
+// function countTruthy(array) {
+//   let x = 0;
+//   for(let index of array) {
+//     if (index) {
+//       x++;
+//     }
+//   }
+//   return x;
+// }
+const movie = {
+  title: 'a',
+  director: 'b',
+  releaseYear: 2023,
+  rating: 3.5
+};
+
+showProperties(movie)
+function showProperties(obj) {
+  for(let property in obj) {
+    if (typeof obj[property] === 'string') {
+      console.log(property, obj[property]);
     }
   }
-  return x;
 }
