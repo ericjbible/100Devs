@@ -262,10 +262,22 @@
 //   }
 // }
 
-showNumbers(10);
+// showNumbers(10);
 
-function showNumbers(limit) {
-  for(let i = 0; i <= limit; i++) {
-    (i === 0) ? console.log(i, "EVEN") : (i % 2 === 0) ? console.log(i, "EVEN") : console.log(i, "ODD");
+// function showNumbers(limit) {
+//   for(let i = 0; i <= limit; i++) {
+//     (i === 0) ? console.log(i, "EVEN") : (i % 2 === 0) ? console.log(i, "EVEN") : console.log(i, "ODD");
+//   }
+// }
+
+console.log(countTruthy([false, NaN, 1, 2, 3]));
+
+function countTruthy(array) {
+  let x = 0;
+  for(let index of array) {
+    if (index) {
+      x++;
+    }
   }
+  return x;
 }
