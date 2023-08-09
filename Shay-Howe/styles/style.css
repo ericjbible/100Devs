@@ -217,3 +217,18 @@ Home
   padding: 40px 0 22px 0;
   float: left;
 }
+
+/*
+  ========================================
+  Primary footer
+  ========================================
+*/
+
+.primary-footer p {
+  float: left;
+}
+
+.primary-footer {
+  padding-bottom: 44px;
+  padding-top: 44px;
+}
