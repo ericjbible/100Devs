@@ -252,9 +252,12 @@
 
 checkSpeed (80);
 function checkSpeed(speed) {
-  if ((Math.floor((speed - 70) / 5)) >= 12) {
+  const speedLimit = 70;
+  const kmPerPoint = 5;
+
+  if ((Math.floor((speed - speedLimit) / kmPerPoint)) >= 12) {
     console.log('Suspended');
   } else {
-    console.log(`${(Math.floor((speed - 70) / 5))} points`);
+    console.log(`${(Math.floor((speed - speedLimit) / kmPerPoint))} points`);
   }
 }
