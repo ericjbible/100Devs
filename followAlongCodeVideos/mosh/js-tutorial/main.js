@@ -246,3 +246,15 @@
 // }
 
 //speed limit = 70
+// 5 => 1 point
+// Math.floor(1.3)
+// 12 points => suspended
+
+checkSpeed (80);
+function checkSpeed(speed) {
+  if ((Math.floor((speed - 70) / 5)) >= 12) {
+    console.log('Suspended');
+  } else {
+    console.log(`${(Math.floor((speed - 70) / 5))} points`);
+  }
+}
