@@ -225,8 +225,24 @@
 
 // console.log(maxOfTwo(5, 2));
 
-function isLandscape(width, height) {
-  return (width > height);
-}
+// function isLandscape(width, height) {
+//   return (width > height);
+// }
 
-console.log(isLandscape(10, 8));
+// console.log(isLandscape(10, 8));
+
+//implement fizzBuzz
+// divisible by 3=>fizz
+// divisible by 5=>buzz
+// divisible by both 3 and 5 => fizzbuzz
+// divisible by neither => input
+// Not a number => 'Not a number'
+
+// const output = fizzBuzz(false);
+// console.log(output);
+
+// function fizzBuzz(input) {
+//   return (typeof input !== 'number') ? 'Not a number' : ((input % 3 === 0) && (input % 5 === 0)) ? 'fizzbuzz' : (input % 5 === 0) ? 'buzz' : (input % 3 === 0) ? 'fizz' : input;
+// }
+
+//speed limit = 70
