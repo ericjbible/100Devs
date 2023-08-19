@@ -216,11 +216,17 @@
 
 // write a function that takes two numbers and returns the maxiumum of the two
 
-function maxOfTwo(a, b) {
-  if (a > b)
-    return a;
-  else
-    return b;
+// function maxOfTwo(a, b) {
+//   if (a > b)
+//     return a;
+//   else
+//     return b;
+// }
+
+// console.log(maxOfTwo(5, 2));
+
+function isLandscape(width, height) {
+  return (width > height);
 }
 
-console.log(maxOfTwo(5, 2));
+console.log(isLandscape(10, 8));
