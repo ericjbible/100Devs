@@ -203,13 +203,24 @@
 // for (let index of colors)
 //   console.log(index);
 
-let i = 0;
-while (i <=10) {
-  if (i === 5) break;
+// let i = 0;
+// while (i <=10) {
+//   if (i === 5) break;
   // if (i %2 === 0) {
   //   i++;
   //   continue;
   // }
-  console.log(i);
-  i++
+//   console.log(i);
+//   i++
+// }
+
+// write a function that takes two numbers and returns the maxiumum of the two
+
+function maxOfTwo(a, b) {
+  if (a > b)
+    return a;
+  else
+    return b;
 }
+
+console.log(maxOfTwo(5, 2));
