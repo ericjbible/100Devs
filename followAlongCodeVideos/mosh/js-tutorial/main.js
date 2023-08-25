@@ -190,11 +190,16 @@
 //   i++
 // } while (i <= 5)
 
-const person = {
-  name: 'Eric',
-  age: 34
-};
+// const person = {
+//   name: 'Eric',
+//   age: 34
+// };
 
-for (let key in person)
-  console.log(key, person[key]);
+// for (let key in person)
+//   console.log(key, person[key]);
+
+const colors = ['red', 'green', 'blue'];
+
+for (let index of colors)
+  console.log(index);
 
