@@ -182,11 +182,19 @@
 //   i++;
 // }
 
-let i = 0;
+// let i = 0;
 
-do {
-  if (i % 2 !== 0)
-    console.log(i);
-  i++
- } while (i <= 5)
+// do {
+//   if (i % 2 !== 0)
+//     console.log(i);
+//   i++
+// } while (i <= 5)
+
+const person = {
+  name: 'Eric',
+  age: 34
+};
+
+for (let key in person)
+  console.log(key, person[key]);
 
