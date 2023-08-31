@@ -157,18 +157,19 @@
 // else
 //   console.log('Good evening!');
 
-let role;
+// let role;
 
-switch (role) {
-  case 'guest':
-    console.log('Guest User');
-    break
+// switch (role) {
+//   case 'guest':
+//     console.log('Guest User');
+//     break
 
-  case 'moderator':
-    console.log('Moderator User');
-    break
+//   case 'moderator':
+//     console.log('Moderator User');
+//     break
 
-  default:
-    console.log('Unknown User');
-}
+//   default:
+//     console.log('Unknown User');
+// }
+
 
