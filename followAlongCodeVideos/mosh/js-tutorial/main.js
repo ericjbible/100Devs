@@ -148,12 +148,27 @@
 // if it is between 12pm and 6pm: Good afternoon!
 // otherwise: Good evening!
 
-let hour = 10;
+// let hour = 10;
 
-if (hour >= 5 && hour < 12) {
-  console.log('Good morning!');
-} else if (hour >= 12 && hour < 6) {
-  console.log('Good afternoon!');
-} else {
-  console.log('Good evening!');
+// if (hour >= 5 && hour < 12)
+//   console.log('Good morning!');
+// else if (hour >= 12 && hour < 6)
+//   console.log('Good afternoon!');
+// else
+//   console.log('Good evening!');
+
+let role;
+
+switch (role) {
+  case 'guest':
+    console.log('Guest User');
+    break
+
+  case 'moderator':
+    console.log('Moderator User');
+    break
+
+  default:
+    console.log('Unknown User');
 }
+
