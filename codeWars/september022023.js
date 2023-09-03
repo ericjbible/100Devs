@@ -12,6 +12,14 @@
 //   return "";
 // }
 
+//my solution
+
 let bmi = (weight, height) => {
   return ( weight / ( height*height )) <= 18.5 ? "Underweight" : ( weight / ( height*height )) <= 25.0 ? "Normal" : ( weight / ( height*height )) <= 30.0 ? "Overweight" : "Obese"
 }
+
+//optimization of my solution
+
+const bmi = (w, h, bmi = w/h/h) =>  bmi <= 18.5 ? "Underweight" :
+                                    bmi <= 25 ? "Normal" :
+                                    bmi <= 30 ? "Overweight" : "Obese";
