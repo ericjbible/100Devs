@@ -131,14 +131,29 @@
 
 // console.log(y);
 
-let a = 'red';
-let b = 'blue';
+// let a = 'red';
+// let b = 'blue';
 
-let c = undefined;
+// let c = undefined;
 
-c = b;
-b = a;
-a = c;
+// c = b;
+// b = a;
+// a = c;
 
-console.log(a);
-console.log(b);
+// console.log(a);
+// console.log(b);
+
+// hour
+// if hour is between 5am and 12pm: Good morning!
+// if it is between 12pm and 6pm: Good afternoon!
+// otherwise: Good evening!
+
+let hour = 10;
+
+if (hour >= 5 && hour < 12) {
+  console.log('Good morning!');
+} else if (hour >= 12 && hour < 6) {
+  console.log('Good afternoon!');
+} else {
+  console.log('Good evening!');
+}
