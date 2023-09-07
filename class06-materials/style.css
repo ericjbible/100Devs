@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  height: 100px;
+  border: solid 1px black;
+  clear: both;
+}
+
+section {
+  float: left;
+  height: 300px;
+  width: 33.3333%;
+  border: solid 1px black;
+}
+
+footer {
+  height: 100px;
+  border: solid 1px black;
+  clear: both;
+}
+
+@media screen and (max-width: 820px) {
+  section {
+    width: 100%;
+    background: yellow;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  section {
+    width: 100%;
+    background: purple;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  section {
+    width: 100%;
+    background: lime;
+  }
+}
