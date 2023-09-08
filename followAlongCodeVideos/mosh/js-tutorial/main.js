@@ -122,6 +122,13 @@
 
 // console.log(currentColor);
 
-let x = 2 + 3 * 4;
+// let x = 2 + 3 * 4;
 
-console.log(x);
+// console.log(x);
+
+// let x = 10;
+// let y = ++x;
+
+// console.log(y);
+
+
