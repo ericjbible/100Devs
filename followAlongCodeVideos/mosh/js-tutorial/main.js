@@ -116,8 +116,12 @@
 
 // Anything that is not Falsy -> Truthy
 
-let userColor = undefined;
-let defaultColor = 'blue';
-let currentColor = userColor || defaultColor
+// let userColor = undefined;
+// let defaultColor = 'blue';
+// let currentColor = userColor || defaultColor
 
-console.log(currentColor);
+// console.log(currentColor);
+
+let x = 2 + 3 * 4;
+
+console.log(x);
