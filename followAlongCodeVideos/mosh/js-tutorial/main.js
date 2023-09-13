@@ -114,4 +114,6 @@
 // ''
 // NaN
 
+// Anything that is not Falsy -> Truthy
+
 
