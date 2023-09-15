@@ -102,6 +102,16 @@
 // they are a 'gold' customer, otherwise,
 // they are a 'silver' customer
 
-let points = 101;
+// let points = 101;
 
-points > 100 ? console.log('gold') : console.log('silver')
+// points > 100 ? console.log('gold') : console.log('silver')
+
+// Falsy (false)
+// undefined
+//null
+// 0
+// false
+// ''
+// NaN
+
+
