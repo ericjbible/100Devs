@@ -97,3 +97,11 @@
 // Loose Equality
 
 // console.log('1' == 1);
+
+// If a customer has more than 100 points,
+// they are a 'gold' customer, otherwise,
+// they are a 'silver' customer
+
+let points = 101;
+
+points > 100 ? console.log('gold') : console.log('silver')
