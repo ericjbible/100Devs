@@ -85,6 +85,15 @@
 
 // console.log(x--);
 
-let x = 1;
+// let x = 1;
 
-console.log(x > 0)
+// console.log(x > 0)
+
+// Strict Equality (Type + Value)
+
+// console.log(1 === 1);
+// console.log('1' === 1);
+
+// Loose Equality
+
+// console.log('1' == 1);
