@@ -13,24 +13,26 @@
         <li>Courses</li>
         <!-- other li elements would be hidden by CSS or JS in dropdown menu-->
       </ul>
-      <form>
-        <!-- fill out search bar when CSS skills are improved-->
-      </form>
-      <img src="#" alt="khan academy logo">
-      <nav>
-        <ul>
-          <li><a href="#">Donate</a></li>
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Signup</a></li>
-        </ul>
-      </nav>
+      <div class="header-flex">
+        <form>
+          <input type="text" placeholder="Search">
+        </form>
+        <img src="#" alt="khan academy logo">
+        <nav>
+          <ul>
+            <li><a href="#">Donate</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Signup</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <sectoin id="hero">
         <div class="background-image">
           <!--this will hold the hero image in the background and two more divs will make the orbital animation -->
-          <div class="orbit-path"></div>
           <div class="orbit-object"></div>
+          <div class="orbit-path"></div>
         </div>
         <section class="hero__content">
           <h1>
@@ -39,16 +41,16 @@
           <p>
             We're a nonprofit with the mission to provide a free, world-class education for anyone, anywhere.
           </p>
-          <ul>
-            <li><a href="#">Learners</a></li>
-            <li><a href="#">Teachers</a></li>
-            <li><a href="#">Districts</a></li>
-            <li><a href="#">Parents</a></li>
+          <ul class="hero-btn-container">
+            <li><a class="hero-link" href="#">Learners</a></li>
+            <li><a class="hero-link" href="#">Teachers</a></li>
+            <li><a class="hero-link" href="#">Districts</a></li>
+            <li><a class="hero-link" href="#">Parents</a></li>
           </ul>
         </section>
       </sectoin>
       <section class="content">
-        <h2>
+        <h2 class="content-heading">
           Why Khan Academy works
         </h2>
       </section>
