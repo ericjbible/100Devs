@@ -1,0 +1,64 @@
+/* Typography */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+.byline {
+  font-size: 1.2rem;
+  color: #454545;
+}
+
+.published-date-time {
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.published-date-time > li:first-of-type {
+  list-style: none;
+}
+
+.published-date-time > li:last-of-type {
+  margin-left: 1.5rem;
+}
+
+.published-date-time > li {
+  line-height: 2;
+  color: #9a9a9a;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+
+
+
+/* Hero */
+
+
+
+/* News Feed */
+
+
