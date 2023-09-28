@@ -1,3 +1,37 @@
+/* Random Components */
+
+.article-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.article-card {
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.main-article {
+  border: 1px solid #ccc;
+  width: 50%;
+}
+
+.quad-article {
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 100%;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.quad-feature {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
 /* Typography */
 
 html {
