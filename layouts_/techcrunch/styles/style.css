@@ -6,6 +6,8 @@ html {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-columns: 16% 1fr;
 }
 
 h1 {
@@ -13,8 +15,20 @@ h1 {
   font-weight: 700;
 }
 
-h2 {
+h2, input, .list-item {
   font-size: 2rem;
+}
+
+input, .list-item {
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h3 + a {
+  font-size: 1.5rem;
 }
 
 p {
@@ -53,7 +67,30 @@ a {
 
 /* Header */
 
+header {
+  color: #9a9a9a;
+}
 
+h3 {
+  color: #fdc006;
+}
+
+input {
+  border: 0;
+  margin: 5rem 0 1rem 0;
+  outline: none;
+}
+
+.nav-list {
+  margin-top: 0.5rem;
+  padding: 0;
+}
+
+.list-item {
+  list-style: none;
+  line-height: 1.5;
+  margin:.5rem 0;
+}
 
 /* Hero */
 
