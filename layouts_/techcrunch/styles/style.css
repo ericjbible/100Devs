@@ -94,7 +94,18 @@ input {
 
 /* Hero */
 
+#hero {
+  display: flex;
+}
 
+.feature {
+  width: 70%;
+}
+
+.sub-feature > ul li {
+  list-style: none;
+  border-bottom: 1px solid #9a9a9a;
+}
 
 /* News Feed */
 
