@@ -99,12 +99,13 @@ input {
 }
 
 .feature {
-  width: 70%;
+  width: 85%;
 }
 
 .sub-feature > ul li {
   list-style: none;
   border-bottom: 1px solid #9a9a9a;
+  padding: 1rem 0;
 }
 
 /* News Feed */
