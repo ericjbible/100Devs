@@ -736,22 +736,49 @@
 //   return output;
 // }
 
-const numbers = [1, 2, 3, 4, 1];
+// const numbers = [1, 2, 3, 4, 1];
 
-const count = countOccurrences(numbers, 1);
+// const count = countOccurrences(numbers, 1);
 
-console.log(count);
+// console.log(count);
 
-function countOccurrences(array, searchElement) {
-  // let count = 0;
-  // for (let element of array)
-  //   if (element === searchElement)
-  //     count++;
-  // return count;
+// function countOccurrences(array, searchElement) {
+//   // let count = 0;
+//   // for (let element of array)
+//   //   if (element === searchElement)
+//   //     count++;
+//   // return count;
 
-  return array.reduce((acc, curr) => {
-    const occurrence = (curr === searchElement) ? 1 : 0;
-    console.log(acc, curr, searchElement);
-    return (acc + occurrence);
-  }, 0);
+//   return array.reduce((acc, curr) => {
+//     const occurrence = (curr === searchElement) ? 1 : 0;
+//     console.log(acc, curr, searchElement);
+//     return (acc + occurrence);
+//   }, 0);
+// }
+
+const numbers = [1, 2, 3, 4];
+
+const max = getMax(numbers);
+
+console.log(max);
+
+function getMax(array) {
+  if (array.length === 0) return undefined;
+
+  // let max = array[0];
+
+  // for (let i = 1; i < array.length; i ++)
+  //   if (array[i] > max)
+  //     max = array[i];
+
+  // return max;
+
+  // array.reduce((a, b) => {
+  //   // if (current > accumulator) return current;
+  //   // return accumulator;
+
+  //   return (a > b) ? a : b;
+  // });
+
+  return array.reduce((a, b) => (a > b) ? a : b);
 }
