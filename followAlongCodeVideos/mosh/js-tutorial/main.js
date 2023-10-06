@@ -838,12 +838,22 @@
 
 // console.log(interest(10000, 3.5, 5))
 
+// getters => access properties
+// setters => change (mutate) them
+
 const person = {
   firstName: 'Eric',
   lastName: 'Bible',
-  fullName() {
+  get fullName() {
     return `${person.firstName} ${person.lastName}`
+  },
+  set fullName(value) {
+    const parts = value.split(' ');
+    this.firstName = parts[0];
+    this.lastName = parts[1];
   }
 };
 
-console.log()
+person.fullName = 'John Smith';
+
+console.log(person.fullName)
