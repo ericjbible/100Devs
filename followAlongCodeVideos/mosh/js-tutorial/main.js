@@ -805,14 +805,31 @@
 // console.log(titles);
 
 //Function Declaration
-function walk() {
-  console.log('walk');
+// walk(); // this is operable because of hoisting which moves function declarations to the top of the code when the javascript engine runs
+
+// function walk() {
+//   console.log('walk');
+// }
+
+// //Anonymous Function Expression
+
+// const run = function() {
+//   console.log('run');
+// };
+// let move = run;
+// run();
+// move();
+
+// function sum(a,b) {
+//   return a + b;
+// }
+// console.log(sum(1));
+
+function sum() {
+  let total = 0;
+  for (let value of arguments)
+    total += value;
+  return total;
 }
 
-//Anonymous Function Expression
-let run = function() {
-  console.log('run');
-};
-let move = run;
-run();
-move();
+console.log(sum(1, 2, 3, 4, 5, 10, 25));
