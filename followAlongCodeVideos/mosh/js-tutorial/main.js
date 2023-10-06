@@ -825,7 +825,7 @@
 // }
 // console.log(sum(1));
 
-function sum() {
+function sum(...args) {
   let total = 0;
   for (let value of arguments)
     total += value;
