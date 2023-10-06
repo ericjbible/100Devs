@@ -848,7 +848,8 @@ const person = {
     return `${person.firstName} ${person.lastName}`
   },
   set fullName(value) {
-    if (typeof value !== 'string') return;
+    if (typeof value !== 'string')
+      throw new Error('Value is not a string.');
 
     const parts = value.split(' ');
     this.firstName = parts[0];
