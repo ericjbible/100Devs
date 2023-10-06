@@ -841,6 +841,9 @@
 const person = {
   firstName: 'Eric',
   lastName: 'Bible',
+  fullName() {
+    return `${person.firstName} ${person.lastName}`
+  }
 };
 
-console.log(`${person.firstName} ${person.lastName}`)
+console.log()
