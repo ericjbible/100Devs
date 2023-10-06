@@ -825,9 +825,18 @@
 // }
 // console.log(sum(1));
 
-function sum(discount, ...prices) {
-  const total = prices.reduce((a,b) => a + b);
-  return total * (1 - discount);
+// function sum(discount, ...prices) {
+//   const total = prices.reduce((a,b) => a + b);
+//   return total * (1 - discount);
+// }
+
+// console.log(sum(.11, 2, 3, 4, 5, 10));
+
+function interest(principal, rate, years) {
+  rate = rate || 3.5;
+  years = years || 5;
+
+  return principal * rate / 100 * years;
 }
 
-console.log(sum(.11, 2, 3, 4, 5, 10));
+console.log(interest(10000, 3.5, 5))
