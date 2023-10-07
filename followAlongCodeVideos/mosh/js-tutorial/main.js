@@ -883,17 +883,25 @@
 //method -> obj
 //function -> global (window, global)
 
-const video = {
-  title: 'a',
-  play() {
-    console.log(this);
-  }
-};
+// const video = {
+//   title: 'a',
+//   play() {
+//     console.log(this);
+//   }
+// };
 
-video.play();
+// video.play();
 
-function video2() {
-  console.log(this);
+// function video2() {
+//   console.log(this);
+// }
+
+// video2();
+
+function sum(...items) {
+  if (items.length === 1 && Array.isArray(items))
+    items = [...items[0]]
+  return items.reduce((a,b) => a + b);
 }
 
-video2();
+console.log(sum([1, 2, 3, 4]))
