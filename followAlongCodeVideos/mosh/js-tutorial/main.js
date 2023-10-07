@@ -898,10 +898,21 @@
 
 // video2();
 
-function sum(...items) {
-  if (items.length === 1 && Array.isArray(items))
-    items = [...items[0]]
-  return items.reduce((a,b) => a + b);
+// function sum(...items) {
+//   if (items.length === 1 && Array.isArray(items))
+//     items = [...items[0]]
+//   return items.reduce((a,b) => a + b);
+// }
+
+// console.log(sum([1, 2, 3, 4]))
+
+const circle = {
+  radius: 1,
+  get area() {
+    return this.radius * this.radius * Math.PI;
+  }
 }
 
-console.log(sum([1, 2, 3, 4]))
+
+circle.area = 9;
+console.log(circle.area);
