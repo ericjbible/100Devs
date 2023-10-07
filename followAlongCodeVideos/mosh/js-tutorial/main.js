@@ -925,7 +925,7 @@ const count = countOccurrences(null, 1);
 console.log(count);
 }
 catch(e){
-  alert(e);
+  console.log(e.message);
 }
 
 function countOccurrences(array, searchElement) {
