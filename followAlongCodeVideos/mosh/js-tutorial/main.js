@@ -906,13 +906,39 @@
 
 // console.log(sum([1, 2, 3, 4]))
 
-const circle = {
-  radius: 1,
-  get area() {
-    return this.radius * this.radius * Math.PI;
-  }
+// const circle = {
+//   radius: 1,
+//   get area() {
+//     return this.radius * this.radius * Math.PI;
+//   }
+// }
+
+
+// circle.area = 9;
+// console.log(circle.area);
+
+try {
+const numbers = [1, 2, 3, 4];
+
+const count = countOccurrences(null, 1);
+
+console.log(count);
+}
+catch(e){
+  alert(e);
 }
 
-
-circle.area = 9;
-console.log(circle.area);
+function countOccurrences(array, searchElement) {
+  // let count = 0;
+  // for (let element of array)
+  //   if (element === searchElement)
+  //     count++;
+  // return count;
+  if (!Array.isArray(array))
+    throw new Error('First argument is not an array!');
+  return array.reduce((accumulator, current) => {
+    const occurrence = (current === searchElement) ? 1 : 0;
+    console.log(accumulator, current, searchElement);
+    return accumulator + occurrence;
+  }, 0);
+}
