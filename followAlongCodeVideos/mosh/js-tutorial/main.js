@@ -974,7 +974,7 @@
 
 function Stopwatch() {
   let startTime, endTime, running, duration = 0;
-
+//Instance members
   this.start = function() {
     if (running)
       throw new Error('Stopwatch has already started.')
@@ -1011,3 +1011,21 @@ Object.defineProperty(person, 'name', {
   enumerable: false,
   configurable: false
 });
+
+const sw1 = new Stopwatch();
+const sw2 = new Stopwatch();
+
+//Prototype members
+Stopwatch.prototype.write = function() {
+  console.log('write the time');
+}
+
+//Iterating instance and prototype members
+
+//Returns instance members
+console.log(Object.keys(sw1));
+
+//returns all members (instance + prototype)
+for (let key in sw1) console.log(key);
+
+
