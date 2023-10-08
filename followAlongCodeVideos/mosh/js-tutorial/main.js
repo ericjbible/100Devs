@@ -972,60 +972,100 @@
 
 // const circle = new Circle(1);
 
-function Stopwatch() {
-  let startTime, endTime, running, duration = 0;
-//Instance members
-  this.start = function() {
-    if (running)
-      throw new Error('Stopwatch has already started.')
+// function Stopwatch() {
+//   this.startTime,
+//   this.endTime,
+//   this.running,
+//   this.duration;
+// //Instance members
+//   // this.start = function() {
+//   //   if (running)
+//   //     throw new Error('Stopwatch has already started.')
 
-    running = true;
-    startTime = new Date();
-  };
-  this.stop = function() {
-    if (!running)
-      throw new Error('Stopwatch is not started.')
+//   //   running = true;
+//   //   startTime = new Date();
+//   // };
+//   // this.stop = function() {
+//   //   if (!running)
+//   //     throw new Error('Stopwatch is not started.')
 
-    running = false;
-    endTime = new Date();
+//   //   running = false;
+//   //   endTime = new Date();
 
-    const seconds = (endTime.detTime() - startTime.getTime()) / 1000;
-    duration += seconds;
-  };
-  this.reset = function() {
-    startTime = null;
-    endTime = null;
-    running = false;
-    duration = 0;
-  };
+//   //   const seconds = (endTime.detTime() - startTime.getTime()) / 1000;
+//   //   duration += seconds;
+//   // };
+//   // this.reset = function() {
+//   //   startTime = null;
+//   //   endTime = null;
+//   //   running = false;
+//   //   duration = 0;
+//   // };
 
-  Object.defineProperty(this, 'duration', {
-    get: function() { return duration; }
-  });
-}
+//   Object.defineProperty(this, 'duration', {
+//     get: function() { return duration; },
+//     set: function(value) { duration = value; }
+//   });
+//   Object.defineProperty(this, 'startTime', {
+//     get: function() { return startTime; }
+//   });
+//   Object.defineProperty(this, 'endTime', {
+//     get: function() { return endTime; }
+//   });
+//   Object.defineProperty(this, 'running', {
+//     get: function() { return running; }
+//   });
+// }
 
-let person = { name: 'Eric' };
 
-Object.defineProperty(person, 'name', {
-  writable: false,
-  enumerable: false,
-  configurable: false
-});
 
-const sw1 = new Stopwatch();
-const sw2 = new Stopwatch();
+// Stopwatch.prototype.start = function() {
+//     if (this.running)
+//       throw new Error('Stopwatch has already started.')
 
-//Prototype members
-Stopwatch.prototype.write = function() {
-  console.log('write the time');
-}
+//     this.running = true;
+//     this.startTime = new Date();
+// }
 
-//Iterating instance and prototype members
+// Stopwatch.prototype.stop = function() {
+//     if (!this.running)
+//       throw new Error('Stopwatch is not started.')
 
-//Returns instance members
-console.log(Object.keys(sw1));
+//     this.running = false;
+//     this.endTime = new Date();
 
-//returns all members (instance + prototype)
-for (let key in sw1) console.log(key);
+//     const seconds = (this.endTime.getTime() - this.startTime.getTime()) / 1000;
+//     this.duration += seconds;
+// }
 
+// Stopwatch.prototype.reset = function() {
+//     this.startTime = null;
+//     this.endTime = null;
+//     this.running = false;
+//     this.duration = 0;
+// }
+
+// // let person = { name: 'Eric' };
+
+// // Object.defineProperty(person, 'name', {
+// //   writable: false,
+// //   enumerable: false,
+// //   configurable: false
+// // });
+
+// const sw1 = new Stopwatch();
+// const sw2 = new Stopwatch();
+
+// //Prototype members
+// Stopwatch.prototype.write = function() {
+//   console.log('write the time');
+// }
+
+// //Iterating instance and prototype members
+
+// //Returns instance members
+// console.log(Object.keys(sw1));
+
+// //returns all members (instance + prototype)
+// for (let key in sw1) console.log(key);
 
