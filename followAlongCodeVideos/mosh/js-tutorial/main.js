@@ -945,36 +945,36 @@
 
 // Factory Function
 
-function createCircle(radius) {
-  return {
-    radius,
-    draw: function() {
-      console.log('draw');
-    }
-  };
+// function createCircle(radius) {
+//   return {
+//     radius,
+//     draw: function() {
+//       console.log('draw');
+//     }
+//   };
 
-}
+// }
 
-const circle = createCircle(1);
+// const circle = createCircle(1);
 
 // Constructor Function
 
 function Circle(radius) {
   this.radius = radius;
+
+  this.defaultLocation = {x: 0, y: 0 };
+
+  this.computeOptimumLocation = function () {
+    // ...
+  }
+
   this.draw = function() {
+    this.computeOptimumLocation();
+
     console.log('draw');
   }
 }
 
-const another = new Circle(1);
+const circle = new Circle(1);
 
-for (let key in circle) {
-  console.log(key, circle[key]);
-}
-
-const keys = Object.keys(circle);
-console.log(keys);
-
-if ('radius' in circle)
-  console.log(circle.radius);
 
