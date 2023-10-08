@@ -962,14 +962,14 @@
 function Circle(radius) {
   this.radius = radius;
 
-  this.defaultLocation = {x: 0, y: 0 };
+  let defaultLocation = {x: 0, y: 0 };
 
-  this.computeOptimumLocation = function () {
+  let computeOptimumLocation = function () {
     // ...
   }
 
   this.draw = function() {
-    this.computeOptimumLocation();
+    computeOptimumLocation();
 
     console.log('draw');
   }
