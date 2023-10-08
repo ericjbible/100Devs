@@ -967,3 +967,8 @@ function Circle(radius) {
 }
 
 const another = new Circle(1);
+
+for (let key in circle) {
+  console.log(key, circle[key]);
+}
+
