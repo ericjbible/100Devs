@@ -1083,9 +1083,12 @@ function Circle(radius, color) {
   this.radius = radius;
 }
 
-Circle.prototype = Object.create(Shape.prototype);
-Circle.prototype.constructor = Circle;
+function extend(Child, Parent) {
+Child.prototype = Object.create(Parent.prototype);
+Child.prototype.constructor = Circle;
+}
 
+extend(Circle, Shape);
 Circle.prototype.draw = function() {
   console.log('draw');
 }
@@ -1094,8 +1097,8 @@ function Square(size) {
   this.size = size;
 }
 
-Square.prototype.constructor = Square;
-Square.prototype = Object.create(Shape.prototype);
+extend(Square, Shape);
 
+const sq = new Square(10);
 const s = new Shape();
 const c = new Circle(1, 'blue');
