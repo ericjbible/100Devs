@@ -1105,6 +1105,14 @@ function Square(size) {
 
 extend(Square, Shape);
 
-const sq = new Square(10);
-const s = new Shape();
-const c = new Circle(1, 'blue');
+Square.prototype.duplicate = function() {
+  console.log('duplicate square');
+}
+
+const shapes = [
+  new Circle(),
+  new Square()
+];
+
+for (let shape of shapes)
+  shape.duplicate();
