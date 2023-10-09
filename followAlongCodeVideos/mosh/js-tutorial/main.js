@@ -1085,12 +1085,18 @@ function Circle(radius, color) {
 
 function extend(Child, Parent) {
 Child.prototype = Object.create(Parent.prototype);
-Child.prototype.constructor = Circle;
+Child.prototype.constructor = Child;
 }
 
 extend(Circle, Shape);
+
 Circle.prototype.draw = function() {
   console.log('draw');
+}
+
+Circle.prototype.duplicate = function() {
+
+  console.log('duplicate circle');
 }
 
 function Square(size) {
