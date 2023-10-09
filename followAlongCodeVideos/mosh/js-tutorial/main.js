@@ -1090,5 +1090,12 @@ Circle.prototype.draw = function() {
   console.log('draw');
 }
 
+function Square(size) {
+  this.size = size;
+}
+
+Square.prototype.constructor = Square;
+Square.prototype = Object.create(Shape.prototype);
+
 const s = new Shape();
 const c = new Circle(1, 'blue');
