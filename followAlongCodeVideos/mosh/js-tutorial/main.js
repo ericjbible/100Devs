@@ -1069,50 +1069,87 @@
 // //returns all members (instance + prototype)
 // for (let key in sw1) console.log(key);
 
-function Shape(color) {
-  this.color = color;
+// function Shape(color) {
+//   this.color = color;
+// }
+
+// Shape.prototype.duplicate = function() {
+//   console.log('duplicate');
+// }
+
+// function Circle(radius, color) {
+//   Shape.call(this, color);
+
+//   this.radius = radius;
+// }
+
+// function extend(Child, Parent) {
+// Child.prototype = Object.create(Parent.prototype);
+// Child.prototype.constructor = Child;
+// }
+
+// extend(Circle, Shape);
+
+// Circle.prototype.draw = function() {
+//   console.log('draw');
+// }
+
+// Circle.prototype.duplicate = function() {
+
+//   console.log('duplicate circle');
+// }
+
+// function Square(size) {
+//   this.size = size;
+// }
+
+// extend(Square, Shape);
+
+// Square.prototype.duplicate = function() {
+//   console.log('duplicate square');
+// }
+
+// const shapes = [
+//   new Circle(),
+//   new Square()
+// ];
+
+// for (let shape of shapes)
+//   shape.duplicate();
+
+const canEat = {
+  eat: function() {
+    this.hunger--;
+    console.log('eating');
+  }
+};
+
+const canWalk = {
+  walk: function() {
+    console.log('walking');
+  }
+};
+
+const canSwim = {
+  swim: function() {
+    console.log('swim');
+  }
+};
+
+function Person() {
+
 }
 
-Shape.prototype.duplicate = function() {
-  console.log('duplicate');
+Object.assign(Person.prototype, canEat, canWalk);
+
+const person = new Person
+console.log(person);
+
+function Goldfish() {
+
 }
 
-function Circle(radius, color) {
-  Shape.call(this, color);
+Object.assign(Goldfish.prototype, canEat, canSwim);
 
-  this.radius = radius;
-}
-
-function extend(Child, Parent) {
-Child.prototype = Object.create(Parent.prototype);
-Child.prototype.constructor = Child;
-}
-
-extend(Circle, Shape);
-
-Circle.prototype.draw = function() {
-  console.log('draw');
-}
-
-Circle.prototype.duplicate = function() {
-
-  console.log('duplicate circle');
-}
-
-function Square(size) {
-  this.size = size;
-}
-
-extend(Square, Shape);
-
-Square.prototype.duplicate = function() {
-  console.log('duplicate square');
-}
-
-const shapes = [
-  new Circle(),
-  new Square()
-];
-
-for (let shape of shapes)
-  shape.duplicate();
+const goldfish = new Goldfish();
+console.log(goldfish);
