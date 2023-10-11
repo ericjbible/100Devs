@@ -1117,6 +1117,10 @@
 // for (let shape of shapes)
 //   shape.duplicate();
 
+function mixin(target, ...sources) {
+  Object.assign(target, ...sources);
+}
+
 const canEat = {
   eat: function() {
     this.hunger--;
@@ -1140,7 +1144,7 @@ function Person() {
 
 }
 
-Object.assign(Person.prototype, canEat, canWalk);
+mixin(Person.prototype, canEat, canWalk);
 
 const person = new Person
 console.log(person);
@@ -1149,7 +1153,7 @@ function Goldfish() {
 
 }
 
-Object.assign(Goldfish.prototype, canEat, canSwim);
+mixin(Goldfish.prototype, canEat, canSwim);
 
 const goldfish = new Goldfish();
 console.log(goldfish);
