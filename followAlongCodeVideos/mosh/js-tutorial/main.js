@@ -1161,45 +1161,65 @@
 // HtmlElement -> click and focus (on the prototype)
 // HtmlSelectElement -> items: [], inherits from HtmlElement
 
-function HtmlElement() {
-  this.click = function() {
-    console.log('clicked');
+// function HtmlElement() {
+//   this.click = function() {
+//     console.log('clicked');
+//   }
+// }
+
+// HtmlElement.prototype.focus = function() {
+//   console.log('focused');
+// }
+
+// function HtmlSelectElement(items = []) {
+//   this.items = items;
+
+//   this.addItem = function(item) {
+//     this.items.push(item);
+//   }
+
+//   this.removeItem = function(item) {
+//     this.items.splice(this.items.indexOf(item), 1);
+//   }
+
+//   this.render = function() {
+//     return `
+//     <select>${this.items.map(item => `
+//       <option>${item}</option>`).join('')}
+//     </select>`;
+//   }
+// }
+
+// HtmlSelectElement.prototype = new HtmlElement();
+// HtmlSelectElement.prototype.constructor = HtmlSelectElement;
+
+// function HtmlImageElement(src) {
+//   this.src = src;
+
+//   this.render = function() {
+//     return `<img src="${this.src}" />`;
+//   }
+// }
+
+// HtmlImageElement.prototype = new HtmlElement();
+// HtmlImageElement.prototype.constructor = HtmlImageElement;
+
+// ES6 Classes
+
+class Circle {
+  constructor(radius) {
+    this.radius = radius;
+    this.move = function() {
+      console.log('move');
+    }
+  }
+
+  draw() {
+    console.log('draw');
   }
 }
 
-HtmlElement.prototype.focus = function() {
-  console.log('focused');
-}
 
-function HtmlSelectElement(items = []) {
-  this.items = items;
+const c = new Circle(1);
 
-  this.addItem = function(item) {
-    this.items.push(item);
-  }
-
-  this.removeItem = function(item) {
-    this.items.splice(this.items.indexOf(item), 1);
-  }
-
-  this.render = function() {
-    return `
-    <select>${this.items.map(item => `
-      <option>${item}</option>`).join('')}
-    </select>`;
-  }
-}
-
-HtmlSelectElement.prototype = new HtmlElement();
-HtmlSelectElement.prototype.constructor = HtmlSelectElement;
-
-function HtmlImageElement(src) {
-  this.src = src;
-
-  this.render = function() {
-    return `<img src="${this.src}" />`;
-  }
-}
-
-HtmlImageElement.prototype = new HtmlElement();
-HtmlImageElement.prototype.constructor = HtmlImageElement;
+console.log(c);
