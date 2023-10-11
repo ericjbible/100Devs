@@ -1233,23 +1233,36 @@
 
 // console.log(c);
 
-const _radius = new WeakMap();
-class Circle {
-  constructor(radius) {
-    _radius.set(this, radius);
+// const _radius = new WeakMap();
+// class Circle {
+//   constructor(radius) {
+//     _radius.set(this, radius);
 
+//   }
+// // ES6 getter
+//   get radius() {
+//     return _radius.get(this);
+//   }
+// // ES6 setter
+//   set radius(value) {
+//     if (value <= 0) throw new Error('invalid radius')
+//     _radius.set(this, value);
+//   }
+
+// }
+
+// const c = new Circle(1);
+
+class Shape {
+  move() {
+    console.log('move');
   }
-
-  get radius() {
-    return _radius.get(this);
-  }
-
-  set radius(value) {
-    if (value <= 0) throw new Error('invalid radius')
-    _radius.set(this, value);
-  }
-
 }
 
-const c = new Circle(1);
+class Circle extends Shape {
+  draw() {
+    console.log('draw');
+  }
+}
 
+const c = new Circle();
