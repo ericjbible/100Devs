@@ -1206,20 +1206,31 @@
 
 // ES6 Classes
 
-class Circle {
-  constructor(radius) {
-    this.radius = radius;
-    this.move = function() {
-      console.log('move');
-    }
-  }
+// class Circle {
+//   constructor(radius) {
+//     this.radius = radius;
+//     this.move = function() {
+//       console.log('move');
+//     }
+//   }
 
-  draw() {
-    console.log('draw');
-  }
-}
+//   // Instance Method
+//   draw() {
+//     console.log('draw');
+//   }
+
+//   // Static Method
+//   static parse(str) {
+//     const radius = JSON.parse(str).radius;
+//     return new Circle(radius);
+//   }
+// }
+
+// const circle = Circle.parse('{ "radius": 2 }')
+// console.log(circle)
+
+// const c = new Circle(1);
+
+// console.log(c);
 
 
-const c = new Circle(1);
-
-console.log(c);
