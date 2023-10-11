@@ -1253,25 +1253,41 @@
 
 // const c = new Circle(1);
 
-class Shape {
-  constructor(color) {
-    this.color = color;
-  }
+// class Shape {
+//   constructor(color) {
+//     this.color = color;
+//   }
 
+//   move() {
+//     console.log('move');
+//   }
+// }
+
+// class Circle extends Shape {
+//   constructor(color, radius) {
+//     super(color)
+//     this.radius = radius;
+//   }
+
+//   draw() {
+//     console.log('draw');
+//   }
+// }
+
+// const c = new Circle('blue', 1);
+
+class Shape {
   move() {
     console.log('move');
   }
 }
 
 class Circle extends Shape {
-  constructor(color, radius) {
-    super(color)
-    this.radius = radius;
-  }
-
-  draw() {
-    console.log('draw');
+  move() {
+    super.move();
+    console.log('circle move');
   }
 }
 
-const c = new Circle('blue', 1);
+const c = new Circle();
+c.move() //returns move then circle move
