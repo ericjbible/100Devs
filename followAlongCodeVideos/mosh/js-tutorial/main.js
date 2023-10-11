@@ -1276,18 +1276,50 @@
 
 // const c = new Circle('blue', 1);
 
-class Shape {
-  move() {
-    console.log('move');
+// class Shape {
+//   move() {
+//     console.log('move');
+//   }
+// }
+
+// class Circle extends Shape {
+//   move() {
+//     super.move();
+//     console.log('circle move');
+//   }
+// }
+
+// const c = new Circle();
+// c.move() //returns move then circle move
+
+const _items = new WeakMap();
+class Stack {
+  constructor() {
+    _items.set(this, []);
+  }
+
+  push(obj) {
+    _items.get(this).push(obj);
+  }
+
+  peek() {
+    const items = _items.get(this);
+
+    if (items.length === 0)
+      throw new Error('Stack is empty.')
+    return items[items.length - 1];
+  }
+
+  pop() {
+    const items = _items.get(this);
+
+    if (items.length === 0)
+      throw new Error('Stack is empty.')
+
+    return items.pop();
+  }
+
+  get count() {
+    return _items.get(this).length;
   }
 }
-
-class Circle extends Shape {
-  move() {
-    super.move();
-    console.log('circle move');
-  }
-}
-
-const c = new Circle();
-c.move() //returns move then circle move
