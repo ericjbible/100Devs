@@ -1117,43 +1117,71 @@
 // for (let shape of shapes)
 //   shape.duplicate();
 
-function mixin(target, ...sources) {
-  Object.assign(target, ...sources);
+// function mixin(target, ...sources) {
+//   Object.assign(target, ...sources);
+// }
+
+// const canEat = {
+//   eat: function() {
+//     this.hunger--;
+//     console.log('eating');
+//   }
+// };
+
+// const canWalk = {
+//   walk: function() {
+//     console.log('walking');
+//   }
+// };
+
+// const canSwim = {
+//   swim: function() {
+//     console.log('swim');
+//   }
+// };
+
+// function Person() {
+
+// }
+
+// mixin(Person.prototype, canEat, canWalk);
+
+// const person = new Person
+// console.log(person);
+
+// function Goldfish() {
+
+// }
+
+// mixin(Goldfish.prototype, canEat, canSwim);
+
+// const goldfish = new Goldfish();
+// console.log(goldfish);
+
+// HtmlElement -> click and focus (on the prototype)
+// HtmlSelectElement -> items: [], inherits from HtmlElement
+
+function HtmlElement() {
+  this.click = function() {
+    console.log('clicked');
+  }
 }
 
-const canEat = {
-  eat: function() {
-    this.hunger--;
-    console.log('eating');
-  }
-};
-
-const canWalk = {
-  walk: function() {
-    console.log('walking');
-  }
-};
-
-const canSwim = {
-  swim: function() {
-    console.log('swim');
-  }
-};
-
-function Person() {
-
+HtmlElement.prototype.focus = function() {
+  console.log('focused');
 }
 
-mixin(Person.prototype, canEat, canWalk);
+function HtmlSelectElement(items = []) {
+  this.items = items;
 
-const person = new Person
-console.log(person);
+  this.addItem = function(item) {
+    this.items.push(item);
+  }
 
-function Goldfish() {
-
+  this.removeItem = function(item) {
+    this.items.splice(this.items.indexOf(item), 1);
+  }
 }
 
-mixin(Goldfish.prototype, canEat, canSwim);
-
-const goldfish = new Goldfish();
-console.log(goldfish);
+HtmlSelectElement.prototype = new HtmlElement;
+HtmlSelectElement.prototype.constructor = HtmlSelectElement;
