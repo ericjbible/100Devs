@@ -7,4 +7,4 @@ function render(document: any) {
   console.log(document);
 }
 
-let numbers = []
+const enum Size { Small, Medium, Large }
