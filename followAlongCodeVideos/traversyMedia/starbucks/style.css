@@ -100,6 +100,38 @@ section a {
   margin: 0 5px;
 }
 
+/* Footer & Social */
+
+.footer-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px 30px;
+}
+
+.social {
+  display: flex;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.social img {
+  width: 35px;
+  height: 35px;
+}
+
+.social a {
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.divider {
+  width: 95%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 40px auto;
+}
+
 /* Box */
 
 .box {
@@ -115,6 +147,16 @@ section a {
   max-width: 500px;
   text-align: center;
   justify-self: center;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+.box-text .btn {
+  margin-top: 20px;
+}
+
+.box-f .box-text {
+  max-width: 600px;
 }
 
 /* Grid Styles */
@@ -151,7 +193,8 @@ section a {
   color: #000;
 }
 
-.btn-dark-outline:hover {
+.btn-dark-outline:hover,
+.btn-light-outline:hover {
   background-color: rgba( 0, 0, 0, 0.06)
 }
 
@@ -181,7 +224,7 @@ section a {
 }
 .bg-extra {
   background-color: var(--color-extra);
-  color: #fff;
+  color: #000;
 }
 .bg-dark {
   background-color: var(--color-dark);
@@ -251,5 +294,9 @@ section a {
     max-width: 1440px;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  .divider {
+    max-width: 90%;
   }
 }
