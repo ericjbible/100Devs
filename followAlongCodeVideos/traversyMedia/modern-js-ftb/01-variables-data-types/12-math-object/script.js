@@ -23,3 +23,5 @@ let y = Math.ceil(Math.random() * 10);
 console.log(y);
 
 console.log(x);
+
+let test;
