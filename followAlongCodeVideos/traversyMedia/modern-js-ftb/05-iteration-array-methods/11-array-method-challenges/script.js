@@ -37,5 +37,18 @@ const people = [
   },
 ];
 
+const youngPeopleFiltered = people.filter((person) => person.age <= 25);
+
+const youngPeople = youngPeopleFiltered.map((person) => ({
+  name: `${person.firstName} ${person.lastName}`,
+  email: `${person.email}`,
+}));
+
+console.log(youngPeople);
+
+// for person in array
+// if person.age <= 25
+// return person.firstName && person.lastName, person.email
+
 // Challenge 2
 const numbers = [2, -30, 50, 20, -12, -9, 7];
