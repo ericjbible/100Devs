@@ -46,9 +46,14 @@ const youngPeople = youngPeopleFiltered.map((person) => ({
 
 console.log(youngPeople);
 
-// for person in array
-// if person.age <= 25
-// return person.firstName && person.lastName, person.email
-
 // Challenge 2
 const numbers = [2, -30, 50, 20, -12, -9, 7];
+
+const positiveSum = numbers
+  .filter((number) => number > 0)
+  .reduce((acc, cur) => (cur += acc), 0);
+
+console.log(positiveSum);
+
+// Challenge 3
+const words = ['coder', 'programmer', 'developer'];
