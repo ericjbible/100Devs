@@ -19,9 +19,13 @@ output = document.forms[0].action;
 
 // document.forms[0].id = 'new-id';
 
-output = document.links;
+// output = document.links;
 output = document.images;
 output = document.images[0];
 output = document.images[0].src;
+
+const forms = Array.from(document.forms);
+
+forms.forEach((form) => console.log(form));
 
 console.log(output);
