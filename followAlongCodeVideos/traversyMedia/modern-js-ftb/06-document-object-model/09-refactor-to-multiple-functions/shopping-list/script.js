@@ -2,6 +2,8 @@ function createNewItem(item) {
   const li = document.createElement('li');
   li.appendChild(document.createTextNode(item));
 
+  const button = createButton('remove-item btn-link text-red');
+
   const icon = document.createElement('i');
   icon.className = 'fa-solid fa-xmark';
 
